@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>RAG Q&A</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📄 RAG Q&A</h1>
+      <span id="status" class="status">checking backend...</span>
+    </header>
+
+    <div class="upload-row">
+      <input id="pdf-file" type="file" accept="application/pdf" />
+      <button id="upload-btn" type="button">Upload PDF</button>
+      <span id="upload-status" class="upload-status"></span>
+    </div>
+
+    <div class="docs-panel">
+      <div class="docs-panel-title">Document versions</div>
+      <div id="docs-list" class="docs-list">Loading...</div>
+    </div>
+
+    <div id="chat" class="chat"></div>
+
+    <form id="chat-form" class="input-row">
+      <input id="question" type="text" placeholder="Ask a question about the document..." autocomplete="off" required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
